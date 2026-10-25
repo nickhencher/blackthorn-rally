@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Blackthorn Rally — Head to the Storm</title>
+<meta name="description" content="The Blackthorn Rally is a veteran-led off-road rally raid, ridden every year since 2016 by the Wild Geese Racing Team. Dirt bikes and side-by-sides across Morocco, Kenya, Tanzania and Colombia, with a conservation or community project in every edition.">
+<meta property="og:title" content="The Blackthorn Rally — Head to the Storm">
+<meta property="og:description" content="A veteran-led rally raid with a social impact. Eleven editions. Morocco, Kenya, Tanzania, Colombia.">
+<meta property="og:image" content="img/hero-dune-group.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/logo-wild-geese-moto-crew.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0f1a3c; --navy-2:#182659; --red:#b5222b; --red-2:#d12a34;
+    --sand:#e4c58a; --sand-2:#f1dfb8; --cream:#f6f1e7; --ink:#1a1612; --ink-2:#4a4239; --line:#e2d8c6;
+    --max:1180px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:"Source Sans 3",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:18px;line-height:1.55;color:var(--ink);background:var(--cream)}
+  img{max-width:100%;display:block}
+  a{color:var(--red);text-decoration:none}
+  a:hover{text-decoration:underline}
+  h1,h2,h3,.display{font-family:"Bebas Neue",Impact,"Arial Narrow",sans-serif;font-weight:400;letter-spacing:.02em;line-height:.95;margin:0}
+  h2{font-size:clamp(40px,6vw,68px);color:var(--navy)}
+  h3{font-size:28px;color:var(--navy)}
+  p{margin:0 0 1em}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+  section{padding:80px 0}
+  .kicker{display:inline-block;font-weight:600;text-transform:uppercase;letter-spacing:.18em;font-size:13px;color:var(--red);margin-bottom:14px}
+  .lede{font-size:21px;color:var(--ink-2);max-width:720px}
+  .btn{display:inline-block;padding:14px 26px;border-radius:4px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-size:14px;border:2px solid transparent;transition:.2s}
+  .btn:hover{text-decoration:none;transform:translateY(-1px)}
+  .btn-red{background:var(--red);color:#fff}
+  .btn-red:hover{background:var(--red-2)}
+  .btn-ghost{border-color:#fff;color:#fff}
+  .btn-ghost:hover{background:#fff;color:var(--navy)}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-navy:hover{background:var(--navy-2)}
+  .btn-line{border-color:var(--navy);color:var(--navy)}
+  .btn-line:hover{background:var(--navy);color:#fff}
+
+  /* header */
+  header{position:fixed;inset:0 0 auto 0;z-index:50;background:linear-gradient(rgba(10,14,30,.85),rgba(10,14,30,0));transition:.3s}
+  header.solid{background:var(--navy);box-shadow:0 2px 12px rgba(0,0,0,.25)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:12px;color:#fff;font-family:"Bebas Neue",sans-serif;font-size:24px;letter-spacing:.06em}
+  .brand img{width:44px;height:44px;border-radius:50%;border:2px solid #fff}
+  .brand:hover{text-decoration:none}
+  .links{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+  .links a{color:#fff;font-weight:600;font-size:15px;letter-spacing:.06em;text-transform:uppercase}
+  .links a:hover{color:var(--sand);text-decoration:none}
+  .burger{display:none;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
+  @media (max-width:860px){
+    .links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--navy);flex-direction:column;gap:0;padding:10px 0 16px}
+    .links.open{display:flex}
+    .links li{padding:12px 24px}
+    .burger{display:block}
+  }
+
+  /* hero */
+  .hero{position:relative;min-height:100svh;display:grid;place-items:center;color:#fff;overflow:hidden;background:var(--navy)}
+  .hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:kb 28s ease-in-out infinite alternate}
+  @keyframes kb{from{transform:scale(1)}to{transform:scale(1.08)}}
+  @media (prefers-reduced-motion:reduce){.hero .poster{animation:none}}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,12,30,.35) 0%,rgba(8,12,30,.25) 50%,rgba(8,12,30,.85) 100%)}
+  .hero-in{position:relative;z-index:2;text-align:center;padding:140px 20px 90px;max-width:960px}
+  .hero-badge{width:150px;height:150px;margin:0 auto 24px;border-radius:50%;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+  .hero h1{font-size:clamp(64px,12vw,150px);color:#fff;text-shadow:0 4px 30px rgba(0,0,0,.45)}
+  .hero h1 span{display:block;color:var(--sand);font-size:.42em;letter-spacing:.14em;margin-top:8px}
+  .hero p{font-size:clamp(18px,2.4vw,24px);max-width:720px;margin:22px auto 32px;color:#f3efe6}
+  .hero .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .hero .edition{display:inline-block;margin-bottom:18px;padding:6px 14px;border:1px solid rgba(255,255,255,.5);border-radius:999px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+
+  /* stats */
+  .stats{background:var(--navy);color:#fff;padding:34px 0}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+  .stat b{display:block;font-family:"Bebas Neue",sans-serif;font-size:56px;line-height:1;color:var(--sand)}
+  .stat span{font-size:15px;letter-spacing:.08em;text-transform:uppercase;opacity:.85}
+  @media (max-width:760px){.stats .wrap{grid-template-columns:repeat(2,1fr)}}
+
+  /* about */
+  .two{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  @media (max-width:900px){.two{grid-template-columns:1fr}}
+  .photo{border-radius:6px;overflow:hidden;box-shadow:0 20px 50px rgba(20,15,10,.22)}
+  blockquote{margin:28px 0 0;padding:22px 26px;border-left:4px solid var(--red);background:#fff;font-style:italic;font-size:19px;color:var(--ink-2)}
+  blockquote cite{display:block;margin-top:10px;font-style:normal;font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--navy)}
+
+  /* stripe */
+  .stripe{height:14px;background:linear-gradient(90deg,var(--navy) 0 40%,var(--red) 40% 60%,var(--navy) 60%)}
+
+  /* editions */
+  .editions{background:#fff}
+  .timeline{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;margin-top:40px}
+  .ed{background:var(--cream);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+  .ed .plate{background:#fff;padding:14px;display:grid;place-items:center;min-height:170px;border-bottom:1px solid var(--line)}
+  .ed .plate img{max-height:150px;width:auto}
+  .ed .plate.photo-plate{padding:0;min-height:0}
+  .ed .plate.photo-plate img{max-height:none;width:100%;height:170px;object-fit:cover}
+  .ed .body{padding:16px 18px 20px}
+  .ed .year{font-family:"Bebas Neue",sans-serif;font-size:34px;color:var(--red);line-height:1}
+  .ed .where{font-weight:600;color:var(--navy);text-transform:uppercase;letter-spacing:.08em;font-size:13px;margin:4px 0 10px}
+  .ed p{font-size:16px;color:var(--ink-2);margin:0}
+  .ed.now{outline:3px solid var(--red);outline-offset:-3px}
+
+  /* impact */
+  .impact{background:var(--navy);color:#fff}
+  .impact h2{color:#fff}
+  .impact .lede{color:#d9d3c5}
+  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:40px}
+  @media (max-width:1000px){.cards{grid-template-columns:1fr 1fr}}
+  @media (max-width:600px){.cards{grid-template-columns:1fr}}
+  .card{background:var(--navy-2);border-radius:6px;overflow:hidden}
+  .card img{height:220px;width:100%;object-fit:cover}
+  .card .body{padding:22px}
+  .card h3{color:var(--sand);margin-bottom:8px}
+  .card p{font-size:16px;color:#e8e2d4;margin:0}
+  .wis{margin-top:56px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  @media (max-width:900px){.wis{grid-template-columns:1fr}}
+  .wis h3{font-size:40px;color:#fff;margin-bottom:12px}
+  .wis p{color:#e8e2d4}
+
+  /* films */
+  .films{background:var(--cream)}
+  .film-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+  @media (max-width:900px){.film-grid{grid-template-columns:1fr 1fr}}
+  @media (max-width:600px){.film-grid{grid-template-columns:1fr}}
+  .film{position:relative;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#000;cursor:pointer;box-shadow:0 12px 30px rgba(20,15,10,.2)}
+  .film img{width:100%;height:100%;object-fit:cover;transition:.4s}
+  .film:hover img{transform:scale(1.04)}
+  .film .play{position:absolute;inset:0;display:grid;place-items:center}
+  .film .play span{width:68px;height:68px;border-radius:50%;background:var(--red);display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+  .film .play svg{margin-left:4px}
+  .film .label{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;background:linear-gradient(transparent,rgba(0,0,0,.75));color:#fff;font-weight:600;font-size:15px}
+  .film iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .film.featured{grid-column:1/-1;aspect-ratio:21/9}
+  @media (max-width:600px){.film.featured{aspect-ratio:16/9}}
+
+  /* gallery */
+  .gallery{background:#fff}
+  .masonry{columns:3;column-gap:14px;margin-top:40px}
+  @media (max-width:900px){.masonry{columns:2}}
+  @media (max-width:560px){.masonry{columns:1}}
+  .masonry a{display:block;break-inside:avoid;margin-bottom:14px;border-radius:4px;overflow:hidden}
+  .masonry img{transition:.4s;width:100%}
+  .masonry a:hover img{transform:scale(1.03)}
+  dialog.lb{border:0;background:transparent;padding:0;max-width:96vw;max-height:96vh}
+  dialog.lb::backdrop{background:rgba(5,8,20,.92)}
+  dialog.lb img{max-width:96vw;max-height:90vh;border-radius:4px}
+  dialog.lb button{position:fixed;top:14px;right:18px;background:none;border:0;color:#fff;font-size:40px;cursor:pointer}
+
+  /* partners */
+  .partners{background:var(--cream);text-align:center}
+  .partners ul{list-style:none;margin:30px auto 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 14px;max-width:960px}
+  .partners li{padding:9px 16px;border:1px solid var(--line);border-radius:999px;background:#fff;font-weight:600;font-size:15px;color:var(--navy)}
+
+  /* support */
+  .support{background:var(--red);color:#fff;text-align:center}
+  .support h2{color:#fff}
+  .support .lede{color:#ffe9ea;margin:0 auto 30px}
+  .support .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .support .btn-ghost:hover{color:var(--red)}
+
+  /* faq */
+  .faq{background:#fff}
+  .faq .list{max-width:820px;margin:36px auto 0}
+  .faq details{border-top:1px solid var(--line);padding:6px 0}
+  .faq details:last-child{border-bottom:1px solid var(--line)}
+  .faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;font-weight:600;font-size:20px;color:var(--navy)}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-family:"Bebas Neue",sans-serif;font-size:32px;color:var(--red);line-height:1;transition:.2s}
+  .faq details[open] summary::after{transform:rotate(45deg)}
+  .faq details p{color:var(--ink-2);margin:0 0 18px;max-width:720px}
+
+  footer{background:#0a1130;color:#b9b3a6;padding:40px 0;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+  footer a{color:#fff}
+  footer .flag{height:36px;width:auto;border-radius:3px}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top"><img src="img/logo-wild-geese-moto-crew.jpg" alt="Wild Geese Moto Crew badge">Blackthorn Rally</a>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('links').classList.toggle('open')">&#9776;</button>
+    <ul class="links" id="links">
+      <li><a href="#rally">The rally</a></li>
+      <li><a href="#editions">Editions</a></li>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#films">Films</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#support">Support</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero" style="padding:0">
+  <img class="poster" src="img/hero-poster.jpg" alt="">
+  <div class="hero-in">
+    <img class="hero-badge" src="img/logo-wild-geese-wheel.jpg" alt="Wild Geese Motocrew — Blackthorn Rally">
+    <div class="edition">11th edition · Morocco · September 2026</div>
+    <h1>Head to the Storm<span>The Blackthorn Rally</span></h1>
+    <p>A veteran-led rally raid, ridden every year since 2016 by the Wild Geese Racing Team. Dirt bikes and side-by-sides across some of the hardest ground on earth, and a conservation or community project delivered on every edition.</p>
+    <div class="cta">
+      <a class="btn btn-red" href="#films">Watch the 2026 film</a>
+      <a class="btn btn-ghost" href="#support">Support the rally</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b>11</b><span>editions since 2016</span></div>
+    <div class="stat"><b>4</b><span>countries · 2 continents</span></div>
+    <div class="stat"><b>35</b><span>riders &amp; drivers in 2026</span></div>
+    <div class="stat"><b>100%</b><span>of donations to the project</span></div>
+  </div>
+</div>
+
+<section id="rally">
+  <div class="wrap two">
+    <div>
+      <span class="kicker">The rally</span>
+      <h2>Born over dinner.<br>Ridden across deserts.</h2>
+      <p class="lede">The Blackthorn Rally began in 2015 as a promise between friends who had served together in the British Army: the adventures would continue.</p>
+      <p>Every year since, the crew has taken on a serious off-road route of its own making. Riders are on enduro bikes; drivers are in side-by-side buggies. The early rallies crossed the Moroccan Sahara. Then came Kenya, Tanzania and, for the tenth anniversary, Colombia's coffee country from Cali to Medellín. In 2026 the rally returned to Morocco, over the Atlas, through the Dadès Gorge and into the dunes of Erg Chebbi and Erg Chigaga.</p>
+      <p>The rally is self-funded by the people who ride it. What it raises goes, in full, to the year's project and to getting wounded, injured and sick veterans onto the start line.</p>
+      <blockquote>
+        "Every year we come together, soldiers turned riders and ralliers, united by the road and a sense of adventure and something bigger than ourselves. Some of us left parts of ourselves on the battlefield. But on these vehicles, we feel whole again."
+        <cite>From the Colombia 2025 film</cite>
+      </blockquote>
+    </div>
+    <div class="photo"><img src="img/three-on-dune-sunset.jpg" alt="Three riders sitting on a dune at sunset beside their bikes, Morocco 2026"></div>
+  </div>
+</section>
+
+<div class="stripe"></div>
+
+<section class="editions" id="editions">
+  <div class="wrap">
+    <span class="kicker">Editions</span>
+    <h2>Eleven rallies, four countries</h2>
+    <p class="lede">Each edition carries its own plate. From the Sahara to the Andes, the route changes; the idea does not.</p>
+    <div class="timeline">
+      <div class="ed"><div class="plate"><img src="img/plate-2018-morocco.jpg" alt="Blackthorn Rally Morocco 2018 plate"></div><div class="body"><div class="year">2018</div><div class="where">Morocco</div><p>The early rallies: the Sahara by dirt bike, with the first wounded, injured and sick veterans riding alongside.</p></div></div>
+      <div class="ed"><div class="plate"><img src="img/plate-2019-may.jpg" alt="Blackthorn Rally 2019 plate, 17th to 25th May"></div><div class="body"><div class="year">2019</div><div class="where">Sahara · 17–25 May</div><p>Dunes, camels and nine days on the bikes.</p></div></div>
+      <div class="ed"><div class="plate"><img src="img/plate-2020-5th.jpg" alt="5th Blackthorn Rally 2020 plate"></div><div class="body"><div class="year">2020</div><div class="where">5th edition</div><p>The fifth rally, run with the support of Northcott Global Solutions.</p></div></div>
+      <div class="ed"><div class="plate"><img src="img/plate-2021-morocco.jpg" alt="Blackthorn Rally Raid 2021 Morocco plate"></div><div class="body"><div class="year">2021</div><div class="where">Morocco</div><p>Rally raid format across the Moroccan desert.</p></div></div>
+      <div class="ed"><div class="plate photo-plate"><img src="img/yt-2022-kenya.jpg" alt="The 2022 team outside a school in Kenya"></div><div class="body"><div class="year">2022</div><div class="where">Kenya</div><p>The rally moves to East Africa, riding out of Nairobi with Offroad Adventure East Africa, and rebuilds a school in the north. The team held its own two-minute silence in the bush on the day of the Queen's funeral.</p></div></div>
+      <div class="ed"><div class="plate"><img src="img/plate-2023-kenya-8th.jpg" alt="8th edition Blackthorn 2023 Kenya plate"></div><div class="body"><div class="year">2023</div><div class="where">Kenya · 20–30 Sept</div><p>Ten days and 1,200 km: 30 on the team, 20-plus bikes and five buggies, with a wheelchair user and an amputee riding. The toughest day was 235 km of rocky riverbed. Project: water pans for around 400 elephants in the Tsavo ecosystem.</p></div></div>
+      <div class="ed"><div class="plate photo-plate"><img src="img/yt-2024-tanzania.jpg" alt="Blackthorn Rally 2024 Tanzania, 9th edition"></div><div class="body"><div class="year">2024</div><div class="where">Tanzania · 25 Sept – 5 Oct</div><p>Nine days, roughly 300 km a day in the buggies, Kilimanjaro on the horizon and Zanzibar at the end. Project: the Masai giraffe, with the Arusha Giraffe Centre.</p></div></div>
+      <div class="ed"><div class="plate photo-plate"><img src="img/yt-2025-colombia.jpg" alt="The team in the Colombian Andes, 2025"></div><div class="body"><div class="year">2025</div><div class="where">Colombia · Cali to Medellín</div><p>The tenth anniversary: six days and 35 riders through the coffee region, climbing to 3,500 m, with more than £30,000 raised to protect the spectacled bear.</p></div></div>
+      <div class="ed now"><div class="plate photo-plate"><video autoplay muted loop playsinline poster="img/plate-2026-morocco-11th.jpg" aria-label="11th edition Blackthorn Rally 2026 Morocco plate" style="width:100%;height:170px;object-fit:cover;display:block"><source src="video/morocco-2026-loop.mp4" type="video/mp4"></video></div><div class="body"><div class="year">2026</div><div class="where">Morocco · 21–30 Sept</div><p>Atlas Mountains, Dadès Gorge, river crossings, salt flats, then the dunes of Erg Chebbi and Erg Chigaga. 35 riders and drivers. "Probably the hardest riding we've done."</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="impact" id="impact">
+  <div class="wrap">
+    <span class="kicker" style="color:var(--sand)">Impact</span>
+    <h2>A rally with a social impact</h2>
+    <p class="lede">Alongside the riding, every edition delivers something that lasts for the people and wildlife along the route.</p>
+    <div class="cards">
+      <div class="card"><img src="img/colombia-wax-palms.jpg" alt="Wax palms in the Colombian Andes"><div class="body"><h3>The spectacled bear, Colombia 2025</h3><p>More than £30,000 raised with Fundación Tremarctos to help create a protected ecosystem in Tolima: monitoring, nine conservation wardens and eco-tourism, in a district where the bear population is thought to be around 135 and falling.</p></div></div>
+      <div class="card"><img src="img/group-rocks.jpg" alt="The team resting on rocks in the Tanzanian bush"><div class="body"><h3>The Masai giraffe, Tanzania 2024</h3><p>Partnered with the Arusha Giraffe Centre to secure the future of the Masai giraffe, funding its education work and a minibus for visiting schools. The Prince and Princess of Wales made the rally a beneficiary of their charity polo day that summer.</p></div></div>
+      <div class="card"><img src="img/elephants-watching.jpg" alt="The team watching elephants in Kenya"><div class="body"><h3>Water for Tsavo, Kenya 2023</h3><p>Water pans at the Teita Estate Wildlife Sanctuary for a community of around 400 elephants, easing friction between wildlife and neighbouring villages. Supported by HRH The Prince of Wales as he ended his tenure as Colonel of the Irish Guards.</p></div></div>
+      <div class="card"><img src="img/kenya-school-group.jpg" alt="The team at a school in northern Kenya"><div class="body"><h3>A school in northern Kenya, 2022</h3><p>The rally's first East African project rebuilt facilities at a school in northern Kenya, delivered by the riders themselves on the way through.</p></div></div>
+    </div>
+    <div class="wis">
+      <div class="photo"><img src="img/kenya-hill-group.jpg" alt="The whole team, including a rider in a wheelchair, on a rocky hilltop above the Rift Valley"></div>
+      <div>
+        <h3>Everyone on the same start line</h3>
+        <p>Some of the team are wounded, injured and sick veterans living with injuries sustained in conflict. Buggies are adapted, with hand controls and modified cabs, so those injuries do not keep anyone off the rally. Riders with no working legs between them have driven 300 km days across Tanzania.</p>
+        <p>That has always been the point. Everyone is there as part of the same team, facing the same desert and sharing the same experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="films" id="films">
+  <div class="wrap">
+    <span class="kicker">Films</span>
+    <h2>Watch the rallies</h2>
+    <p class="lede">Each edition is filmed by the crew. Press play to watch on this page.</p>
+    <blockquote style="max-width:720px">"Ten hours a day inside a helmet, focused only on the terrain ahead. And, strangely, one of the best ways I know to recharge."<cite>Ben Farrell MBE, founder, after Morocco 2026</cite></blockquote>
+    <div class="film-grid">
+      <div class="film featured" data-id="9FmoVFMoVz8"><img src="img/yt-2026-morocco.jpg" alt="Blackthorn Rally 2026 Morocco film"><div class="play"><span><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span></div><div class="label">Blackthorn Rally 2026 — Morocco · 15 min</div></div>
+      <div class="film" data-id="wqgaFTFogbA"><img src="img/yt-2025-colombia.jpg" alt="Blackthorn Rally Colombia 2025 film"><div class="play"><span><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span></div><div class="label">Colombia 2025 — the tenth rally</div></div>
+      <div class="film" data-id="zoFAeg7Aawk"><img src="img/yt-2024-tanzania.jpg" alt="Blackthorn Rally 2024 Tanzania film"><div class="play"><span><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span></div><div class="label">Tanzania 2024 — 9th edition</div></div>
+      <div class="film" data-id="qgKgcIhnAKI"><img src="img/yt-2023-kenya.jpg" alt="Blackthorn Rally 2023 Kenya film"><div class="play"><span><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span></div><div class="label">Kenya 2023 — 8th edition</div></div>
+      <div class="film" data-id="TIqF0lPsPhU"><img src="img/yt-2022-kenya.jpg" alt="Blackthorn Rally 2022 Kenya film"><div class="play"><span><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span></div><div class="label">Kenya 2022</div></div>
+      <div class="film" data-id="XzBb48SU_Kw"><img src="img/yt-8-years.jpg" alt="Blackthorn Rally 8 years celebration film"><div class="play"><span><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span></div><div class="label">Eight years of Blackthorn</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <span class="kicker">Gallery</span>
+    <h2>From the road</h2>
+    <div class="masonry">
+      <a href="img/hero-dune-group.jpg"><img src="img/hero-dune-group.jpg" alt="The 2026 team on a dune at sunset with their bikes" loading="lazy"></a>
+      <a href="img/rider-ktm-dunes.jpg"><img src="img/rider-ktm-dunes.jpg" alt="Rider on an orange enduro bike in the dunes" loading="lazy"></a>
+      <a href="img/team-six-desert.jpg"><img src="img/team-six-desert.jpg" alt="Six riders in Wild Geese Racing Team jerseys in the desert" loading="lazy"></a>
+      <a href="img/colombia-mural-group.jpg"><img src="img/colombia-mural-group.jpg" alt="The team in front of a mural in Colombia" loading="lazy"></a>
+      <a href="img/two-riders-sunset.jpg"><img src="img/two-riders-sunset.jpg" alt="Two riders on their bikes at sunset in the dunes" loading="lazy"></a>
+      <a href="img/bikes-under-acacia.jpg"><img src="img/bikes-under-acacia.jpg" alt="A line of enduro bikes under an acacia tree in Kenya" loading="lazy"></a>
+      <a href="img/group-kasbah-ktms.jpg"><img src="img/group-kasbah-ktms.jpg" alt="The team with their KTMs outside a kasbah in Morocco" loading="lazy"></a>
+      <a href="img/buggy-driver-portrait.jpg"><img src="img/buggy-driver-portrait.jpg" alt="A driver at the wheel of a side-by-side buggy" loading="lazy"></a>
+      <a href="img/riders-dune-ridge.jpg"><img src="img/riders-dune-ridge.jpg" alt="Riders along a dune ridge" loading="lazy"></a>
+      <a href="img/colombia-hacienda-group.jpg"><img src="img/colombia-hacienda-group.jpg" alt="The team outside a hacienda in Colombia" loading="lazy"></a>
+      <a href="img/rider-dune-portrait.jpg"><img src="img/rider-dune-portrait.jpg" alt="Rider stopped on a dune" loading="lazy"></a>
+      <a href="img/group-buggy-bikes-morocco.jpg"><img src="img/group-buggy-bikes-morocco.jpg" alt="Riders and a buggy in the Moroccan hills" loading="lazy"></a>
+      <a href="img/three-riders-seated.jpg"><img src="img/three-riders-seated.jpg" alt="Three riders taking a break" loading="lazy"></a>
+      <a href="img/buggy-two-men.jpg"><img src="img/buggy-two-men.jpg" alt="Two men in a buggy cab" loading="lazy"></a>
+      <a href="img/big-group-panorama.jpg"><img src="img/big-group-panorama.jpg" alt="The whole team in Colombia" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<section class="partners">
+  <div class="wrap">
+    <span class="kicker">With thanks</span>
+    <h2>Backed by</h2>
+    <p class="lede" style="margin:0 auto">Organisations that have supported recent rallies and their projects.</p>
+    <ul>
+      <li>Northcott Global Solutions</li><li>The Invictus Games Foundation</li><li>Irish Guards</li><li>Blesma</li><li>Woodway UK</li><li>Sabre 22</li><li>Sure Grip Hand Controls</li><li>M&amp;C Saatchi</li><li>VICTVS</li><li>Omnea</li><li>Bunzl</li><li>Think</li><li>Barossa Advisory</li><li>Sword Training Solutions</li><li>Worshipful Company of Tobacco Pipe Makers and Tobacco Blenders</li><li>KTM</li><li>Army Benevolent Fund</li><li>Forces Employment Charity</li><li>Team Forces</li><li>Bravery</li><li>Offroad Adventure East Africa</li><li>Arusha Giraffe Centre</li><li>Fundación Tremarctos</li>
+    </ul>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div style="text-align:center">
+      <span class="kicker">FAQ</span>
+      <h2>Questions people ask us</h2>
+    </div>
+    <div class="list">
+      <details open>
+        <summary>What is the Blackthorn Rally?</summary>
+        <p>An annual off-road rally raid organised and ridden by military veterans, under the Wild Geese Racing Team banner. It started in 2015 as a pact between friends who had served together, and the first rally ran in 2016. Each edition is a multi-day route of our own design, on dirt bikes and side-by-side buggies, paired with a conservation or community project in the host country.</p>
+      </details>
+      <details>
+        <summary>Where has it been, and where next?</summary>
+        <p>Morocco for the early editions, then Kenya (2022 and 2023), Tanzania (2024), Colombia for the tenth anniversary (2025) and back to Morocco for the eleventh in September 2026. The next route is announced to the team first and then on Instagram.</p>
+      </details>
+      <details>
+        <summary>Who takes part?</summary>
+        <p>The team is drawn from veterans and the friends who ride with them, usually 25 to 35 people in a year. Some of the crew are wounded, injured and sick veterans living with injuries sustained in conflict. If you think you belong on the start line, get in touch and tell us about yourself.</p>
+      </details>
+      <details>
+        <summary>What do you ride and drive?</summary>
+        <p>Enduro dirt bikes for the riders and side-by-side buggies for the drivers. Several buggies are adapted with hand controls and modified cabs so that an injury is not a reason to stay at home. Local operators supply the machines and support vehicles in each country.</p>
+      </details>
+      <details>
+        <summary>How is the rally funded?</summary>
+        <p>The riders and drivers pay their own way. Everything raised from supporters goes in full to that year's project, or to the cost of getting a wounded veteran onto the rally. Sponsors have included Northcott Global Solutions, the Invictus Games Foundation, Blesma and the Irish Guards.</p>
+      </details>
+      <details>
+        <summary>What have the projects achieved?</summary>
+        <p>A rebuilt school in northern Kenya. Water pans for around 400 elephants at the Teita Estate sanctuary in the Tsavo ecosystem. Education and transport for the Arusha Giraffe Centre's work on the Masai giraffe. A protected area for the spectacled bear in Tolima, Colombia, with Fundación Tremarctos. Each project is chosen with local partners and visited by the team during the rally.</p>
+      </details>
+      <details>
+        <summary>Can my business sponsor the rally?</summary>
+        <p>Yes. Sponsorship covers a project, a wounded veteran's place, or the rally itself, and sponsors travel with us in spirit on the plates, jerseys and films. Use the contact button below and we will come back to you.</p>
+      </details>
+      <details>
+        <summary>Where can I buy the jersey or the Blackthorn whisky?</summary>
+        <p>The shop is being rebuilt. In the meantime, message us on Instagram and we will let you know what is still available.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="support" id="support">
+  <div class="wrap">
+    <img src="img/logo-head-to-the-storm-10.jpg" alt="Head to the Storm — established 2015" style="width:140px;margin:0 auto 20px;border-radius:50%">
+    <h2>Ride with us. Back the project.</h2>
+    <p class="lede">The riders pay their own way. Every pound donated goes to the year's conservation or community project, or to getting a wounded veteran onto the start line. If you or your business would like to support the next rally, we would love to hear from you.</p>
+    <div class="cta">
+      <a class="btn btn-ghost" href="mailto:hello@blackthornrally.com">Get in touch</a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/blackthornrally/" target="_blank" rel="noopener">Instagram</a>
+      <a class="btn btn-ghost" href="https://www.youtube.com/@BlackthornRally" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><img class="flag" src="img/banner-flag-head-to-the-storm.jpg" alt="Wild Geese Blackthorn Rally flag"></div>
+    <div>© <span id="yr">2026</span> The Blackthorn Rally · Wild Geese Racing Team · Head to the Storm</div>
+    <div><a href="https://www.instagram.com/blackthornrally/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.youtube.com/@BlackthornRally" target="_blank" rel="noopener">YouTube</a></div>
+  </div>
+</footer>
+
+<dialog class="lb" id="lb"><button aria-label="Close" onclick="document.getElementById('lb').close()">&times;</button><img id="lbimg" alt=""></dialog>
+
+<script>
+  // header colour on scroll
+  const hdr=document.querySelector('header');
+  addEventListener('scroll',()=>hdr.classList.toggle('solid',scrollY>40),{passive:true});
+  document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('links').classList.remove('open')));
+  // YouTube facades
+  document.querySelectorAll('.film').forEach(f=>f.addEventListener('click',()=>{
+    const id=f.dataset.id;
+    f.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0" title="Blackthorn Rally film" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+  }));
+  // lightbox
+  const lb=document.getElementById('lb'),lbimg=document.getElementById('lbimg');
+  document.querySelectorAll('.masonry a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();lbimg.src=a.href;lbimg.alt=a.querySelector('img').alt;lb.showModal();}));
+  lb.addEventListener('click',e=>{if(e.target===lb)lb.close();});
+  document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
