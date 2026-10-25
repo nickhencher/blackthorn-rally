@@ -44,10 +44,6 @@
   .btn-line{border-color:var(--navy);color:var(--navy)}
   .btn-line:hover{background:var(--navy);color:#fff}
 
-  /* draft strip (remove before launch) */
-  .draft{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--sand);color:var(--ink);text-align:center;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:8px 44px 8px 16px}
-  .draft button{position:absolute;right:10px;top:2px;background:none;border:0;font-size:22px;line-height:1;cursor:pointer;color:var(--ink)}
-
   /* header */
   header{position:fixed;inset:0 0 auto 0;z-index:50;background:linear-gradient(rgba(10,14,30,.85),rgba(10,14,30,0));transition:.3s}
   header.solid{background:var(--navy);box-shadow:0 2px 12px rgba(0,0,0,.25)}
@@ -187,8 +183,6 @@
 </style>
 </head>
 <body>
-
-<div class="draft" id="draft">Draft for review · not yet live · October 2026 <button onclick="document.getElementById('draft').remove()" aria-label="Dismiss">&times;</button></div>
 <header id="top">
   <div class="wrap nav">
     <a class="brand" href="#top"><img src="img/logo-wild-geese-moto-crew.jpg" alt="Wild Geese Moto Crew badge">Blackthorn Rally</a>
